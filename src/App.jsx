@@ -1,11 +1,17 @@
-import React, { Component } from "react/cjs/react.development";
+import React, { Component } from "react";
 import EmployeeList from "./components/EmployeeList";
+import { Container, Header } from "semantic-ui-react";
 class App extends Component {
   render() {
-    return <div>
-      <h1 id='header'>Employee List</h1>
-      <EmployeeList />
-    </div>;
+    return (
+      <Container>
+        <Header size="huge" id="header">
+          Employee List
+        </Header>
+
+        <EmployeeList />
+      </Container>
+    );
   }
 }
 
