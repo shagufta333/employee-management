@@ -4,7 +4,7 @@ describe("Display list of employees", () => {
   });
 
   it("display a header", () => {
-    cy.get('#header').should("contain", "Employee List");
+    cy.get("#header").should("contain", "Employee List");
   });
 
   it("displays a list with 6 items", () => {
@@ -15,9 +15,12 @@ describe("Display list of employees", () => {
 
   it("the list items display the expected content", () => {
     cy.get("#employee-list").within(() => {
-      cy.get(".employee-item")
-        .first()
-        .should("contain", "George Bluth");
+      cy.get(".employee-item").first().should("contain", "George Bluth");
+    });
+  });
+  it("the list items display an image", () => {
+    cy.get("#employee-list").within(() => {
+      cy.get(".employee-item").first().find(".avatar").should("be.visible");
     });
   });
 });
