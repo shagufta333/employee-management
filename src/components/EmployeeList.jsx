@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Item } from "semantic-ui-react";
+import EmployeeModal from "./EmployeeModal";
+import { Item, ItemExtra } from "semantic-ui-react";
 
 class EmployeeList extends Component {
   state = {
@@ -12,7 +13,7 @@ class EmployeeList extends Component {
   }
 
   getEmployees = async () => {
-    let employeeData = await axios.get("https://reqres.in/api/users");
+    let employeeData = await axios.get('https://reqres.in/api/users/');
     this.setState({ employees: employeeData.data.data });
   };
   render() {
@@ -30,6 +31,9 @@ class EmployeeList extends Component {
             <Item.Header className="name">
               {employee.first_name} {employee.last_name}
             </Item.Header>
+            <ItemExtra>
+              <EmployeeModal id= {employee.id}/>
+            </ItemExtra>
           </Item.Content>
         </Item>
       );
