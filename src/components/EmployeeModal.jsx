@@ -26,11 +26,13 @@ class EmployeeModal extends Component {
             onClick={() => {
               this.getEmployee();
             }}
+            
             size="tiny"
             positive
             className="view-button"
+            
           >
-            View
+            view
           </Button>
         }
       >

@@ -1,0 +1,8 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "files.autoSaveDelay": 500,
+    "files.maxMemoryForLargeFilesMB": 4099,
+    "workbench.hover.delay": 1000
+}

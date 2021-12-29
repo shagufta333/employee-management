@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Header size="huge" id="header">
+        <Header as='h1' size='huge' id="header">
           Employee List
         </Header>
 

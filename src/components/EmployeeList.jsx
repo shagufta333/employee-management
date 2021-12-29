@@ -28,7 +28,7 @@ class EmployeeList extends Component {
             src={employee.avatar}
           />
           <Item.Content verticalAlign="middle">
-            <Item.Header className="name">
+            <Item.Header as='h3' className="name">
               {employee.first_name} {employee.last_name}
             </Item.Header>
             <ItemExtra>
